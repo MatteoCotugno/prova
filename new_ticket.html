@@ -1,0 +1,305 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+
+    <title>IFT</title>
+    <link href="./style.css" rel="stylesheet">
+    <link href="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.css" rel="stylesheet" type="text/css">
+    <script src="https://unpkg.com/vanilla-datatables@latest/dist/vanilla-dataTables.min.js" type="text/javascript"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.9.0/css/all.min.css" integrity="sha512-q3eWabyZPc1XTCmF+8/LuE1ozpg5xxn7iO89yfSOd5/oKvyqLngoNGsx8jq92Y8eXJ/IRxQbEC+FGSYxtk2oiw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  </head>
+
+  <body>
+    <!--navbar-->
+    <nav class="navbar navbar-expand-lg navbar-light">
+      <div class="container-fluid">
+        <img src="immagini/" width="30" height="30" alt="">
+          <a class="navbar-brand" href="#" style="color:white">IFT</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+            <div class="collapse navbar-collapse" >
+              <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              </ul>
+              <form class="d-flex">
+                <a class="nav-link active" aria-current="page" href="#" ><i class="fas fa-life-ring"></i> Aiuto</a>
+                <a class="nav-link active" aria-current="page" href="#" ><i class="fas fa-folder"></i> Documenti</a>
+                <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" ><i class="fas fa-user"></i> Utenza</a>   
+              </form>
+            </div>
+        </div>
+    </nav>
+
+
+      
+    <div class=" d-flex flex-row ">
+      <!--sidebar-->
+      <ul class="nav flex-column" >
+        <li class="nav-item" >
+          <a class="nav-link active" href="#"><i class="fas fa-clipboard-list fa-3x"></i><br>giornata<br>lavorativa</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#"><a class="nav-link active" href="#"><i class="fas fa-clipboard-list fa-3x"></i><br>Miei dati</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="#"><a class="nav-link active" href="#"><i class="fas fa-clipboard-list fa-3x"></i><br>Presenze</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="#"><a class="nav-link active" href="#"><i class="fas fa-clipboard-list fa-3x"></i><br>Tickets</a>
+        </li>
+        <li class="nav-item" >
+          <a class="nav-link" href="#"><a class="nav-link active" href="#"><i class="fas fa-clipboard-list fa-3x"></i><br>Trasferte</a>
+        </li>
+      </ul>
+      <section class="section">
+        <nav class="navbar navbar-light bg-light" style="">
+          <span class="navbar-brand mb-0 h1" style="margin-left:100px ;font-size:xx-large;"><strong>TICKET</strong></span>
+            <div class="d-flex flex-row-reverse">
+              <button style="border-color: transparent;background-color:rgb(77, 178, 245);color:rgb(253, 253, 253); width:120px;height:40px;margin:20px;margin-right:80px;">Salva</button>
+              <button style="border-color: transparent;background-color:rgb(77, 178, 245);color:rgb(253, 253, 253);width:80px;height:40px;margin: 20px;"><i class="fas fa-bars"></i></button>
+              <button style="border-color: transparent;background-color:rgb(77, 178, 245);color:rgb(253, 253, 253);width:80px;height:40px;margin:20px"><i class="fas fa-plus-circle"></i></button>
+            </div>
+        </nav> 
+        <div class="card" style="height: 200vh">
+          <h2 style="margin-top:10px; margin-left:50px">DATI</h2>
+            <hr>
+          <form class="row" style="margin-top:2%;">
+            <div class="col"style="margin-left:2%;">
+              <label class="form-label"><strong>Azienda</strong></label>
+                <div class="input-group">
+                  <input class="form-control" readonly  ><span class="input-group-text"><i class="fas fa-backspace"></i></span>
+                </div>
+            </div>
+            <div class="col">
+              <label  class="form-label"><strong>Indirizzo Intervento</strong></label>
+                <div class="input-group">
+                  <input class="form-control"readonly  ><span class="input-group-text"><i class="fas fa-backspace"></i></span>
+                </div>
+            </div>
+              <div class="col" style="margin-right:2%">
+                <label class="form-label"><strong>Referente</strong></label>
+                <div class="input-group">
+                  <input class="form-control"readonly  ><span class="input-group-text"><i class="fas fa-backspace"></i></span>
+                </div>
+              </div>
+          </form>
+          <form class="row" style="margin-top:2%;">
+            <div class="col"style="margin-left:2%;">
+              <label  class="form-label"><strong>Ticket Rif.cliente</strong></label>
+              <input  class="form-control" >
+            </div>
+            <div class="col">
+              <label class="form-label"><strong>Oggetto</strong></label>
+              <input  class="form-control" >
+            </div>
+            <div class="col" style="margin-right:2%">
+              <label  class="form-label"><strong>Tipologia</strong></label>
+                <select class="form-control">
+                  <option>Default select</option>
+                </select>
+            </div>
+          </form>
+
+          <div class="card" style="width: 1000px;height: 400px;margin-left:2%;">
+            <div class="card-header">
+              <button style=" border-color: transparent;color:aliceblue;background-color:rgb(77, 178, 245);border-radius: 180px;"><i class="fas fa-plus"></i></button>
+            </div>
+            <div class="card-body">
+            </div>
+          </div>
+
+          <form class="row" style="margin-top:2%;">
+            <div class="col"style="margin-left:2%;">
+              <label class="form-label"><strong>Data</strong></label>
+              <input class="form-control"  style="width: 200px;">
+            </div>
+            <div class="col">
+              <label class="form-label"><strong>Scadenza</strong></label>
+              <input class="form-control" style="width: 200px;">
+            </div>
+              <div class="col" style="margin-right:2%">
+                <label  class="form-label"><strong>Data chiusura</strong></label>
+                <input  class="form-control"style="width: 200px;">
+              </div>
+
+          </form>
+          <form class="row" style="margin-top:2%;">
+            <div class="col"style="margin-left:2%;">
+              <label class="form-label"><strong>Priorità</strong></label>
+                <select class="form-control">
+                  <option>Default select</option>
+                </select><br>
+                <label  class="form-label"><strong>Gruppo</strong></label>
+                <div class="input-group">
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option>Default select</option>
+                  </select>
+                  <label class="input-group-text"><i class="fas fa-backspace"></i></label>
+                </div>
+            </div>
+            <div class="col">
+              <label  class="form-label"><strong>Canale</strong></label>
+                <select class="form-control">
+                  <option>Default select</option>
+                </select><br>
+                <label class="form-label"><strong>Gestore</strong></label>
+                <div class="input-group">
+                  <select class="form-select" id="inputGroupSelect01">
+                    <option>Default select</option>
+                  </select>
+                </div>
+                  
+            </div>
+            <div class="col" style="margin-right:2%">
+              <label for="inputPassword4" class="form-label"><strong>Stadio</strong></label>
+                <select class="form-control">
+                  <option>Default select</option>
+                </select>
+            </div>
+          </form><br><br>
+
+          <form style="margin-left:2%;margin-right:2%">
+            <table class="table table-bordered table-striped"  id="tabella3">
+              <thead>
+                <tr>
+                  <th scope="col">ID</th>
+                  <th scope="col">NOME</th>
+                  <th scope="col">DIMENSIONE</th>
+                  <th scope="col">ESTENSIONE</th>
+                  <th scope="col">DATA INSERIMENTO</th>
+                  <th scope="col">DATA SCADENZA</th>
+                </tr>
+              </thead>
+              <tbody>                    
+              </tbody>
+            </table>  
+            <button style="border-color: transparent;color:aliceblue;background-color: rgb(207, 207, 33);">Inserisci Allegato</button>
+              
+            <button style="border-color: transparent;color:aliceblue;background-color: rgb(207, 207, 33);">Associa Allegato</button>
+          </form><br>
+          <form>
+            <div class="form-group" style="margin-left:1%;margin-right:2%;">
+              <label for="exampleInputEmail1"><strong>Nuovo aggiornamento</strong></label>
+              <input  class="form-control">
+                 
+            </div>
+          </form><br><br>
+          <div class="row">
+            <div class="col-sm"style="margin-left:1%">
+              <label  class="form-label"><strong>aggiornamenti precedenti</strong></label>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">..........................................................................................................................................................................................................................................................................<br>
+                      .....................................................................................................<br></p>           
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+
+                      .....................................................................................................<br>
+                      .....................................................................................................<br></p>           
+                  </div>
+                </div>
+                <div class="card">
+                  <div class="card-body">
+                    <h5 class="card-title">Card title</h5>
+                    <p class="card-text">.....................................................................................................<br>
+                      .....................................................................................................<br></p>           
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+                      .....................................................................................................<br>
+
+                      .....................................................................................................<br>
+                      .....................................................................................................<br></p>              
+                  </div>
+                </div>
+                    
+            </div>
+            <div class="col-sm"style="margin-right:2%;margin-top:0.5%">
+              <label  class="form-label"><strong>Inoltro email</strong></label>
+              <input  class="form-control"><br>
+              <div class="d-flex flex-row-reverse">
+                  <button style="border-color: transparent;color:aliceblue;background-color: rgb(86, 177, 238);">Inoltra email</button>
+              </div><br>
+              <label  class="form-label"><strong>Chiusura ticket</strong></label>
+              <input  class="form-control"><br>
+                <div class="d-flex flex-row-reverse">
+                  <button style="border-color: transparent;margin-left:10px;color:aliceblue;background-color: rgb(86, 177, 238);">Chiudi ticket e invia email</button>
+                  <button style="border-color: transparent;color:aliceblue;background-color: rgb(86, 177, 238);">Invia ticket</button>
+                </div> 
+            </div>
+            <form>
+              <div class="overflow-auto" >
+                <div class="col-sm"style="margin-left:1%;width:950px">
+                  <label  class="form-label"><strong>Messaggi</strong></label>
+                  <div class="input-group">
+                    <input class="form-control" >
+                  </div><br>
+                    <button style="border-color: transparent;color:aliceblue;background-color: rgb(86, 177, 238);margin-left:1%;">Invia</button>
+                      <button style="border-color: transparent;color:aliceblue;background-color: rgb(86, 177, 238);margin-left:1%;">Allega file</button><br><br>
+                        <div class="col"style="margin-left:1%">
+                          <label  class="form-label"><strong>aggiornamenti precedenti</strong></label>
+                            <div class="card w-75">
+                              <div class="card-body">
+                                <h5 class="card-title">Card title</h5>
+                                  <p class="card-text"></p>           
+                              </div>
+                            </div>
+                        </div>
+              </div>
+            </form>
+            
+          </div>
+                    
+        
+   
+        </div>   
+      </section>
+    </div>                  
+                    
+        
+            
+            
+    
+
+    <!-- Optional JavaScript; choose one of the two! -->
+
+    <!-- Option 1: Bootstrap Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+    <!-- Option 2: Separate Popper and Bootstrap JS -->
+    <!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+    -->
+  </body>
+  <script>
+    var dataTable3 = new DataTable("#tabella3");
+         
+      fetch("./provaNewTicket.json")
+        .then(response=>response.json())
+        .then(json=>{ 
+          console.log(json)
+          dataTable3.import({
+            type: "json",
+            data: JSON.stringify(json),
+                  
+          });
+        });
+  </script>
+
+</html>

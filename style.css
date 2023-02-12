@@ -1,0 +1,71 @@
+
+/*navbar orizzontale */
+.navbar-light{
+    background-color: rgb(66, 61, 61);
+    color: aliceblue;
+}
+/* link barra superiore*/
+.nav-link{
+    
+    color:gray;
+    text-align: center;
+    
+}
+/* navbar verticale*/
+.nav{
+    
+    height: 250vh; 
+    flex:0 1 0;
+    color:white; 
+    align-items: center;
+    background-color: rgb(66, 63, 63);
+   
+    
+}
+/*sezione */
+.section{
+    flex:15 1 0;
+    background-color:gray;
+}
+
+/* bottoni(icone)*/
+.p-3{
+     margin-top:35px;
+     margin-right: 60px;
+     font-size: 70%;
+     height:20px ;
+     width: 80px;
+     background-color:#0dcaf0;
+     display: flex;
+     justify-content: center;
+     align-items: center;
+     
+    
+     
+}
+
+
+
+ 
+
+/* titolo sezione*/
+.p-2{
+    margin-top: 1%;
+    
+   
+}
+/*link navbar verticale */
+.nav-item{
+    margin-top: 20%;
+    padding-top:0px;
+    
+}
+/* select (aziende)*/
+.form-select{
+    margin-left:3px;
+    width: 17.5%;
+}
+/*card contenente tutto(tabelle, checkbox, label,select ecc.)*/
+.card{
+    margin:1%;
+}
